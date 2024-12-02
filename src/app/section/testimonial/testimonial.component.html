@@ -1,0 +1,27 @@
+<div class="testimonial__main" id="testimonial">
+    <div class="testimonial__container">
+        <p-carousel [value]="content" [showIndicators]="false" [showNavigators]="false" [autoplayInterval]="4000">
+            <ng-template let-item pTemplate="item">
+        <div class="testimonial__card">
+            <p class="testimonial__text">
+                {{item.testimonial}}
+            </p>
+            <div class="testimonial__name">{{item.name}}</div>
+       
+        <div class="testimonial__bottom">
+            <div class="bottomLeft">
+                <p>{{item.pageNumber}}</p>
+                <img src="../../../assets/line.svg" alt="">
+                <p>3</p>
+            </div>
+            <div class="bottomRight">
+                <i class="pi pi-angle-left" ></i>
+                <i class="pi pi-angle-right" ></i>
+            </div>
+        </div>
+    </div>
+    
+    </ng-template>
+</p-carousel>
+    </div>
+</div>

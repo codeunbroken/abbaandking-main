@@ -1,0 +1,65 @@
+.tools__main{
+    width: 100vw;
+    height: 100%;
+}
+
+.tools__container{
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 100%;
+    margin-inline: auto;
+    background-image: url(../../../assets/backgroundAbbanKings.svg);
+    background-position: top left;
+    background-size: 50rem;
+    background-repeat: no-repeat;
+    gap: 70px;
+}
+
+.tools__left{
+    width: 35%;
+}
+
+.tools__right{
+    width: 45%;
+}
+
+.paragraph{
+    margin-bottom: 10px;
+}
+
+.head__two{
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.imgCard{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+    place-items: left;
+    margin: 100px 0;
+}
+.imgCard img{
+    height: 40px;
+    filter: saturate(0);
+}
+
+@media screen and (max-width: 480px){
+    .tools__container{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .tools__right, .tools__left{
+        width: 100%;
+    }
+
+    .imgCard{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .imgCard img{
+        height: 25px;
+    }
+}

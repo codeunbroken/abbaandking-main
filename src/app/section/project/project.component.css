@@ -1,0 +1,91 @@
+.project__main {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -80px;
+}
+
+.project__container {
+  width: 85%;
+  height: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-areas:
+    "leftTop leftTop rightTop "
+    "leftTop  leftTop rightTop "
+    "leftTop  leftTop rightMid "
+    "leftBottom  leftBottom rightMid "
+    "leftBottom  leftBottom rightBottom "
+    "leftBottom leftBottom rightBottom ";
+    grid-gap: 15px;
+}
+.project__container div{
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    position: relative;
+    /* cursor: pointer; */
+    transition: all 250ms ease-in-out;
+}
+
+
+.img1 {
+  grid-area: leftTop;
+  background-image: url(../../../assets/programer-sitting-desk-with-multiple-screens-running-code-talking-with-colleague-about-artificial-intelligence-algorithm-software-developers-doing-innovative-artificial-intelligence-project_482257-40606.jpeg);
+  background-size: cover;
+}
+.img2 {
+  grid-area: leftBottom;
+  background-image: url(../../../assets/african-american-young-programmer-wearing-headphone-while-typing-security-codes-business-website-working-rmeote-from-home-employee-programming-software-application-software-screen_482257-28569.jpeg);
+}
+.img3 {
+  grid-area: rightTop;
+  background-image: url(../../../assets/right1.jpeg);
+}
+.img4 {
+  grid-area: rightMid;
+  background-image: url(../../../assets/right2.jpeg);
+}
+
+.img5 {
+  grid-area: rightBottom;
+  background-image: url(../../../assets/right3.jpeg);
+}
+
+
+
+/* .img3::after, .img4::after, .img5::after{
+    content: 'view project';
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    color: var(--white);
+    font-size: 14px;
+    cursor: pointer;
+} */
+.img3:hover:after, .img4:hover::after, .img5:hover::after{
+    color: var(--sec-color);
+    
+}
+
+
+@media screen and (max-width: 480px){
+  .project__main{
+    height: 100%;
+  }
+    .project__container{
+      display: grid;
+      grid-template-areas:
+    "leftTop"
+    "rightTop "
+    "rightMid  "
+    "leftBottom "
+    "leftBottom"
+    "rightBottom ";
+    grid-gap: 15px;
+}
+.project__container div{
+  height: 150px;
+}
+}

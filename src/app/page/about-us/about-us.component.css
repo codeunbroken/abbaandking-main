@@ -1,0 +1,162 @@
+.aboutUs__main{
+  background: var(--pry-col);
+  height: 75vh;
+  width: 100vw;
+  background-image: url(../../../assets/backgroundAbbanKings.svg);
+}
+
+.aboutUs__container{
+  width: 85%;
+  height: 70%;
+  margin: auto;
+  gap: 50px;
+}
+
+.content__left{
+  background-image: url(../../../assets/passion-2.png);
+  height: 512px;
+  width: 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 17px 40px rgba(22, 33, 242, 0.07));
+  border-radius: 10px;
+  background-size: cover;
+}
+.content__right2{
+  background-image: url(../../../assets/empathy2.png);
+  height: 512px;
+  width: 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 17px 40px rgba(22, 33, 242, 0.07));
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.content__left3{
+  background-image: url(../../../assets/temerity2.png);
+  height: 512px;
+  width: 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 17px 40px rgba(22, 33, 242, 0.07));
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.head__one{
+  margin-top: 250px;
+}
+
+.text__left p{
+  font-weight: 100;
+  color: var(--pry-col);
+
+}
+
+.sub__title2{
+  font-weight: normal;
+  color: var(--pry-col);
+  line-height: 1.5;
+
+}
+
+.text__right p{
+  font-weight: bold;
+}
+
+.aboutUs__left{
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sub__title{
+  color: var(--white);
+}
+
+.sub__title2{
+  color: var(--pry-col);
+  padding: 20px 0;
+}
+
+.aboutUs__content__container{
+  width: 85%;
+  margin: auto;
+  margin-bottom: 100px;
+}
+
+.content__wrapper{
+  display: flex;
+  gap: 90px;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.content__left2{
+  width: 50%;
+}
+
+.content__right2{
+  width: 50%;
+}
+.content__right3{
+  width: 50%;
+}
+.content__left3{
+  width: 50%;
+}
+
+.content__left{
+  width: 50%;
+}
+
+.content__right{
+  width: 50%;
+}
+
+.text__top{
+  display: flex;
+  gap: 50px;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e2;
+  /* width: 210px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 810px){
+  .home__container{
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      height: auto;
+  }
+  .hero__left, .hero__right{
+      width: 100%;
+  }
+
+  .hero__right{
+      width: 80%;
+  }
+}
