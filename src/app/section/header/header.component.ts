@@ -1,13 +1,6 @@
-import { DOCUMENT } from '@angular/common';
-import {
-  Component,
-  EventEmitter,
-  HostListener,
-  Inject,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { CalendlyService } from 'src/app/services/calendly.service';
 
 @Component({
   selector: 'app-header',
@@ -15,39 +8,51 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  id: boolean = false;
+  @Output() pageId = new EventEmitter();
+
   constructor(
-    public router: Router,
-    @Inject(DOCUMENT) private document: Document
+    private calendlyService: CalendlyService,
+    private router: Router
   ) {}
+
+  openCalendly(): void {
+    this.calendlyService.openCalendly(
+      'https://calendly.com/abbaandking-sales/talk-with-our-sales-team'
+    );
+  }
+
+  modal = false;
+  id: boolean = false;
 
   ngOnInit(): void {}
 
-  modal() {
-    this.id = !this.id;
+  triggerModal() {
+    this.modal = !this.modal;
   }
 
-  // scroll(id: any) {
-  //   this.id = !this.id;
-  //   let target = this.document.getElementById(id);
-  //   target.scrollIntoView(true);
+  // test(id: string){
+  //   this.router.navigate(['/home'])
+  //   this.navigate(id)
   // }
 
-  scroll(id: string) {
-    this.id = !this.id;
+  // navigate(id: string) {
+  //   this.router.navigate(['/home']).then(() => {
+  //     // console.log(id);
+  //     this.pageId.emit(id);
+  //   });
   
-    if (this.router.url === '/') {
-      const target = this.document.getElementById(id);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      this.router.navigate(['/'], { fragment: id }).then(() => {
-        const target = this.document.getElementById(id);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    }
-  }
+
+  //   this.modal = false;
+  // }
+
+  // navigate(route: string, scrollToSelector?: string) {
+  //   this.router.navigate([route]).then(() => {
+  //     if (scrollToSelector) {
+  //       const element = document.getElementById(scrollToSelector);
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: 'smooth' });
+  //       }
+  //     }
+  //   });
+  // }
 }

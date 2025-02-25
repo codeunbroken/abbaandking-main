@@ -1,0 +1,33 @@
+<div class="main__container bg-[var(--bg-color)]">
+  <div class="main__wrapper">
+    <div class="head">
+      <h2 class="h2 text-left md:text-center pb-4 md:pb-6">
+        Explore our Services
+      </h2>
+      <div
+        class="paragraph text-left md:text-center pb-4 md:pb-12 w-full md:w-[50%] mx-auto"
+      >
+        <p>
+          From DevOps to AI, we offer comprehensive IT solutions tailored to
+          your business needs.
+        </p>
+      </div>
+    </div>
+
+    <div class="cards grid grid-cols-1 gap-4 md:grid md:grid-cols-4 md:gap-6">
+      <div
+        class="content bg-white p-6 md:p-8 rounded-2xl"
+        *ngFor="let item of cardItems"
+      >
+        <div class="h3 pb-2 md:pb-4">
+          {{ item.title }}
+        </div>
+        <div class="paragraph-3">
+          <p>
+            {{ item.content }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

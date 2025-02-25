@@ -1,17 +1,24 @@
-<app-header></app-header>
-<div class="privacy__main">
-  <div class="privacy__container">
+<app-header (pageId)="navigate($event.route, $event.scrollTo)" ></app-header>
+
+<div class="main__container">
+  <div
+    class="main__wrapper bg-policiesBg bg-cover bg-no-repeat bg-center w-full md:w-full h-full md:h-[40vh] mt-[30%] md:mt-[6%]"
+  >
     <div class="privacy__top">
-      <div class="top__wrapper">
-        <h2 class="head__two">Privacy Policy</h2>
-        <div class="text">
+      <div
+        class="top__wrapper flex flex-col justify-center items-center h-full md:h-full"
+      >
+        <h2 class="h1 text-center">Privacy Policy</h2>
+        <div class="paragraph-2 text-center">
           <p>Last Updated: 2 December, 2024</p>
         </div>
       </div>
     </div>
+  </div>
+  <div class="main__wrapper w-full md:w-[65vw] mx-auto">
     <div class="privacy__content">
-      <div class="sub__title">IMPORTANT INFORMATION</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">IMPORTANT INFORMATION</div>
+      <div class="paragraph pb-2 md:pb-4">
         This page states the Terms and Conditions under which you may use the
         website www.abbaandking.com (referred to as the Site). Please read these
         Terms and Conditions carefully. If you do not accept the Terms and
@@ -22,8 +29,8 @@
         may consider the Terms and Conditions binding to successive visits.
       </div>
 
-      <div class="sub__title">INFORMATION ON THE SITE</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">INFORMATION ON THE SITE</div>
+      <div class="paragraph pb-2 md:pb-4">
         This Site aims to provide commercial information to clients prospective
         and current. However, personal comments, opinions, and views expressed
         on this Site are not necessarily a representation of the views of Abba
@@ -36,23 +43,23 @@
         the absence of such terms.
       </div>
 
-      <div class="sub__title">USER INTERACTIONS</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">USER INTERACTIONS</div>
+      <div class="paragraph pb-2 md:pb-4">
         Generally, any communication which you transfer to the Site is
         considered to be non-confidential. Abba and King Systems LLC will not
         guarantee the privacy or confidentiality of any information relating to
         the user passing over the Internet.
       </div>
 
-      <div class="sub__title">DISCLAIMER</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">DISCLAIMER</div>
+      <div class="paragraph pb-2 md:pb-4">
         Abba and King Systems LLC does not claim the Site will operate free of
         errors or that the Site and its servers are free of possibly harmful
         elements.
       </div>
 
-      <div class="sub__title">THIRD PARTY LINKS</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">THIRD PARTY LINKS</div>
+      <div class="paragraph pb-2 md:pb-4">
         The Site may contain links to third-party Web Sites. These links are
         provided solely as a convenience to you. Abba and King Systems LLC is
         not responsible for the content of linked third-party sites and does not
@@ -63,8 +70,8 @@
         sites.
       </div>
 
-      <div class="sub__title">GENERAL</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">GENERAL</div>
+      <div class="paragraph pb-2 md:pb-4">
         Any disputes, claims, or proceedings arising out of or in any way
         relating to the materials or the Site shall be governed by the laws of
         the Federal Republic of Nigeria. The Nigerian Courts shall have
@@ -87,4 +94,4 @@
   </div>
 </div>
 
-<app-footer ></app-footer>
+<app-footer></app-footer>

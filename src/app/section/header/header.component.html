@@ -1,43 +1,122 @@
-<div class="header__main">
-  <div class="header__container">
-    <div class="hamburger" (click)="modal()">
+<div
+  class="main__containe z-[1000] py-0 md:py-0 bg-[var(--bg-color)] fixed top-0 left-0 right-0 md:z-[1000]"
+>
+  <div
+    class="main__wrapper py-2 md:py-4 flex items-center justify-between md:flex md:items-center md:justify-between"
+  >
+    <div class="logo__container w-[35%] md:w-[7%]">
+      <div class="logo w-full">
+        <img
+          class="cursor-pointer"
+          routerLink="/home"
+          src="../../../assets/abba-logo.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div
+      class="links hidden md:flex md:items-center md:gap-9 list-none md:cursor-pointer"
+    >
+      <li (click)="pageId.emit({ route: 'home', scrollTo: 'about' })">About</li>
+      <li (click)="pageId.emit({ route: 'home', scrollTo: 'expertise' })">
+        Expertise
+      </li>
+      <li (click)="pageId.emit({ route: 'home', scrollTo: 'services' })">
+        Services
+      </li>
+      <li (click)="pageId.emit({ route: 'home', scrollTo: 'products' })">
+        Products
+      </li>
+      <li (click)="pageId.emit({ route: 'home', scrollTo: 'contactUs' })">
+        Contact Us
+      </li>
+    </div>
+
+    <div class="btn hidden md:block">
+      <div class="secondary__button">
+        <button (click)="openCalendly()">Get in touch</button>
+      </div>
+    </div>
+
+    <div
+      class="hamburger w-fit md:w-fit block md:hidden"
+      (click)="triggerModal()"
+    >
       <i class="pi pi-bars"></i>
     </div>
-    <div class="logo" (click)="scroll('home')">
-      <img src="../../../assets/abba-logo.png" alt="" />
-    </div>
   </div>
 </div>
-<div [class]="id ? 'sidebar__main active' : 'sidebar__main'">
-  <button class="cancel" (click)="modal()">
-    <img src="../../../assets/cancelButton.svg" alt="" />
-  </button>
-  <div class="sidebar__container">
-    <div class="sidebar__left">
-      <!-- <button routerLink="/home">Home</button> -->
-      <div class="sidebar__left">
-        <a (click)="scroll('home')" > Home</a>
-        <a (click)="scroll('about')">About Us</a>
-        <a (click)="scroll('process')">Process</a>
-        <a (click)="scroll('tools')">Tools</a>
-        <a (click)="scroll('testimonial')">Testimonial</a>
-        <a (click)="scroll('contact')">Contact Us</a>
-      </div>
-    </div>
-    <img class="divider" src="../../../assets/Linesidebar.svg" alt="" />
 
-    <div class="sidebar__right">
-      <div class="title">Reach Us</div>
-      <div class="sidebar__content">
-        <img src="../../../assets/twitterIcon.svg" alt="" />
-        <p>@abbaandking</p>
-        <img src="../../../assets/locationIcon.svg" alt="" />
-        <p>Top floor, 38 Orogun road, Ibadan.</p>
-        <img src="../../../assets/emailIcon.svg" alt="" />
-        <p>info@abbaandking.com</p>
-        <img src="../../../assets/phoneIcon.svg" alt="" />
-        <p>(+234) 817 631 7001</p>
+<!-- mobile--header -->
+
+<ng-template [ngIf]="modal">
+  <div
+    class="main__container h-auto bg-white fixed top-[60vh] z-[2000] transform translate-y-[-100%] transition-transform duration-300 peer-checked:translate-y-0"
+  >
+    <div class="main__wrappe p-12 py-[10%] md:p-8">
+      <div class="nav__action flex items-center justify-between">
+        <div class="img w-[25%]">
+          <img
+            routerLink="/home"
+            src="../../../assets/abba-logo-mobile.png"
+            alt=""
+          />
+        </div>
+        <div class="icon">
+          <img
+            src="../../../assets/cancel-icon.svg"
+            alt=""
+            (click)="triggerModal()"
+          />
+        </div>
+      </div>
+      <div class="nav__links grid grid-cols-1 gap-8 mt-12 list-none">
+        <li
+          class="cursor-pointer"
+          (click)=" triggerModal();  pageId.emit({ route: 'home', scrollTo: 'about' })"
+        >
+          About
+        </li>
+        <li
+          class="cursor-pointer"
+          (click)="triggerModal();     pageId.emit({ route: 'home', scrollTo: 'expertise' })"
+        >
+          Expertise
+        </li>
+        <li
+          class="cursor-pointer"
+          (click)="triggerModal();    pageId.emit({ route: 'home', scrollTo: 'services' })"
+        >
+          Services
+        </li>
+        <li
+          class="cursor-pointer"
+          (click)="
+            triggerModal(); pageId.emit({ route: 'home', scrollTo: 'products' })
+          "
+        >
+          Products
+        </li>
+        <li
+          class="cursor-pointer"
+          (click)="triggerModal();     pageId.emit({ route: 'home', scrollTo: 'contactUs' })"
+        >
+          Contact us
+        </li>
+      </div>
+      <div class="btnx mt-12">
+        <div class="btn">
+          <div class="primary__button__mobile">
+            <button (click)="openCalendly()">Get in touch</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+
+  <div
+    class="overlay block md:hidden fixed h-[65vh] bottom-[-80px] w-full z-50 bg-black/25"
+    (click)="triggerModal()"
+  ></div>
+</ng-template>

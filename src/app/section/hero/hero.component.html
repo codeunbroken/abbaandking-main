@@ -1,32 +1,42 @@
-<div class="hero__main" id="home">
-  <div class="home__container">
-    <div class="hero__left">
-      <h1 class="head__one">
-        Providing
-        <p>Solutions for</p>
-        <p class="flex">
-          Business
-          <ngx-typed-js
-            [strings]="['Growth', 'Goals.']"
-            [loop]="true"
-            [showCursor]="true"
-            [typeSpeed]="100"
-            [backSpeed]="100"
-            [smartBackspace]="true"
-          >
-            <span class="typing head__one"></span>
-          </ngx-typed-js>
-        </p>
-      </h1>
-      <p class="sub__title"> Software Development & Artificial Intelligence Experts</p>
-      <!-- <div>
-                <button class="btn">Get started with us <img src="../../../assets/arrowIcon.svg" alt=""></button>
-
-               </div> -->
+<div
+  class="main__container bg-[var(--bg-color)] md:bg-desktop md:bg-center md:bg-no-repeat md:bg-cover h-[90vh] md:h-[90vh] mt-[35%] md:mt-[5%]"
+>
+  <div
+    class="main__wrapper mt-[15%] w-full flex flex-col gap-4 text-left md:w-[70vw] md:flex md:items-center md:justify-center md:gap-4 md:text-center md:mt-0 mx-auto"
+  >
+    <div class="h1 text-var[(--pry-col)]">
+      We craft intelligent software that propels Businesses.
     </div>
 
-    <div class="hero__right">
-      <img src="../../../assets/globe.png" alt="" />
+    <div>
+      <p class="paragraph w-full md:w-[85%] mx-auto">
+        Building software solutions, partnering with ambitious clients looking
+        to grow by harnessing next generation technology.
+      </p>
+    </div>
+    <div
+      class="sub__content flex flex-row gap-2 justify-center items-top md:flex-row md:items-center md:justify-center md:gap-2"
+    >
+      <div class="section1 ">
+        <img src="../../../assets/star-icon.svg" alt="" />
+      </div>
+      <div class="text">
+        <div>
+          <p class="paragraph-2">
+            Software Development & Artificial Intelligence Experts.
+          </p>
+        </div>
+      </div>
+      <div class="section2 hidden md:block">
+        <img src="../../../assets/star-icon.svg" alt="" />
+      </div>
+    </div>
+
+    <div class="btn pt-4 md:pt-6">
+      <div class="primary__button">
+        <button (click)="openCalendly()" >Get in touch</button>
+        
+      </div>
     </div>
   </div>
 </div>

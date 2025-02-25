@@ -1,16 +1,22 @@
-<app-header></app-header>
-<div class="terms__main">
-  <div class="terms__container">
+<app-header (pageId)="navigate($event.route, $event.scrollTo)" ></app-header>
+<div class="main__container">
+  <div
+    class="main__wrapper bg-policiesBg bg-cover bg-no-repeat bg-center w-full md:w-full h-full md:h-[40vh] mt-[30%] md:mt-[6%]"
+  >
     <div class="terms__top">
-      <div class="top__wrapper">
-        <h2 class="head__two">Terms and Conditions</h2>
-        <div class="text">
+      <div
+        class="top__wrapper top__wrapper flex flex-col justify-center items-center h-full md:h-full"
+      >
+        <h2 class="h1 text-center">Terms and Conditions</h2>
+        <div class="paragraph-2 text-center">
           <p>Last Updated: 2 December, 2024</p>
         </div>
       </div>
     </div>
+  </div>
+  <div class="main__wrapper w-full md:w-[65vw] mx-auto">
     <div class="terms__content">
-      <div class="text">
+      <div class="paragraph pb-2 md:pb-4">
         We at Abba and King Systems LLC treat the privacy of our visitors with
         the highest importance. This policy details the measures we take to
         preserving and safely guarding your privacy when you visit our site or
@@ -20,8 +26,8 @@
         explained in this Privacy Policy.
       </div>
 
-      <div class="sub__title">PRIVACY POLICIES</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">PRIVACY POLICIES</div>
+      <div class="paragraph pb-2 md:pb-4">
         <ul>
           <li>Data Collection</li>
           <li>Your Personal Data and how it is Used</li>
@@ -35,16 +41,18 @@
         </ul>
       </div>
 
-      <div class="sub__title">COOKIE POLICY</div>
+      <div class="h3 pb-2 md:pb-4">COOKIE POLICY</div>
 
-      <div class="sub__title">SUBJECT ACCESS REQUEST RESPONSE PROCEDURE</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">
+        SUBJECT ACCESS REQUEST RESPONSE PROCEDURE
+      </div>
+      <div class="paragraph pb-2 md:pb-4">
         We undertake regular updates to our Privacy Policy which we will notify
         you of on our website or by email.
       </div>
 
-      <div class="sub__title">GLOSSARY</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">GLOSSARY</div>
+      <div class="paragraph pb-2 md:pb-4">
         <ul>
           <li>
             <strong>Affiliated Third Parties</strong> includes companies with
@@ -94,20 +102,22 @@
         </ul>
       </div>
 
-      <div class="sub__title">SUBJECT ACCESS REQUEST RESPONSE PROCEDURE</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">
+        SUBJECT ACCESS REQUEST RESPONSE PROCEDURE
+      </div>
+      <div class="paragraph pb-2 md:pb-4">
         We undertake regular updates to our Privacy Policy which we will notify
         you of on our website or by email.
       </div>
 
-      <div class="sub__title">PRIVACY POLICY</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">PRIVACY POLICY</div>
+      <div class="paragraph pb-2 md:pb-4">
         We undertake regular updates to our Privacy Policy which we will notify
         you of on our website or by email.
       </div>
 
-      <div class="sub__title">1.Data Collection</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">1.Data Collection</div>
+      <div class="paragraph pb-2 md:pb-4">
         We may collect, use, store and transfer different kinds of Personal Data
         about you which we have grouped together as follows:
         <ul>
@@ -168,8 +178,8 @@
           </li>
         </ul>
       </div>
-      <div class="sub__title">2.Your Personal Data and how it is Used</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">2.Your Personal Data and how it is Used</div>
+      <div class="paragraph pb-2 md:pb-4">
         Primarily, we collect, process and store your Personal Data to help us
         better connect with you. The following are the purposes for which we
         collect your Personal Data:
@@ -235,8 +245,8 @@
         information with our advertisers.
       </div>
 
-      <div class="sub__title">3.Change of Purpose</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">3.Change of Purpose</div>
+      <div class="paragraph pb-2 md:pb-4">
         We will only use your Personal Data for the aforementioned purposes,
         unless we reasonably consider that we need to use it for another reason
         and that reason is compatible with the original purpose. If you wish to
@@ -246,8 +256,8 @@
         will notify you and request for your express consent.
       </div>
 
-      <div class="sub__title">4.Your Personal Data Rights</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">4.Your Personal Data Rights</div>
+      <div class="paragraph pb-2 md:pb-4">
         Data Protection Laws provides you with certain rights in relation to the
         information that we collect about you.
 
@@ -296,10 +306,10 @@
         <strong>Data Subject Access Request Procedure.</strong>
       </div>
 
-      <div class="sub__title">
+      <div class="h3 pb-2 md:pb-4">
         5.Persons who have access to your Personal Data
       </div>
-      <div class="text">
+      <div class="paragraph pb-2 md:pb-4">
         In addition to our staff who have a business need to know, the following
         trusted third parties have access to your information:
 
@@ -334,8 +344,8 @@
         instructions.
       </div>
 
-      <div class="sub__title">6.Security & Confidentiality</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">6.Security & Confidentiality</div>
+      <div class="paragraph pb-2 md:pb-4">
         Information submitted by you is stored on secure servers we have which
         are encrypted and access is restricted to only authorised persons in
         charge of maintaining the servers. We have put in place physical,
@@ -357,8 +367,10 @@
         electronically.
       </div>
 
-      <div class="sub__title">7. Transfer of Personal Data outside Nigeria</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">
+        7. Transfer of Personal Data outside Nigeria
+      </div>
+      <div class="paragraph pb-2 md:pb-4">
         The Personal Data we collect may be transferred to and processed in
         another country other than your country of residence for the purposes
         stated above. The data protection laws in those countries may be
@@ -374,8 +386,8 @@
         Data.
       </div>
 
-      <div class="sub__title">8. Retention of Personal Data</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">8. Retention of Personal Data</div>
+      <div class="paragraph pb-2 md:pb-4">
         We retain your Personal Data for no longer than reasonably necessary for
         the purposes set out in this Policy and in accordance with legal,
         regulatory, tax, accounting or reporting requirements.
@@ -396,8 +408,8 @@
         policy shall apply.
       </div>
 
-      <div class="sub__title">9. Third Party Links</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">9. Third Party Links</div>
+      <div class="paragraph pb-2 md:pb-4">
         This website or our email communication may include links to third party
         websites, plug-ins and applications. Clicking on those links or enabling
         those connections may allow third parties to collect or share data about
@@ -406,8 +418,8 @@
         encourage you to read the privacy policy of every website you visit.
       </div>
 
-      <div class="sub__title">Cookies Policy</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">Cookies Policy</div>
+      <div class="paragraph pb-2 md:pb-4">
         <ul>
           <li>
             Our advertisers and organisation may have the occasion to collect
@@ -445,8 +457,10 @@
         </ul>
       </div>
 
-      <div class="sub__title">Subject Access Request Response Procedure</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">
+        Subject Access Request Response Procedure
+      </div>
+      <div class="paragraph pb-2 md:pb-4">
         <ul>
           <li>
             Where you wish to exercise any of your data privacy rights you shall
@@ -496,8 +510,8 @@
         </ul>
       </div>
 
-      <div class="sub__title">10. Fees and Timeframe</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">10. Fees and Timeframe</div>
+      <div class="paragraph pb-2 md:pb-4">
         10.1. We shall ensure that we provide the information required by you
         within a period of one month from the receipt of the request.
         Occasionally it could take us longer than a month if your request is
@@ -527,8 +541,10 @@
         b. write a letter to you stating refusal to act on the request and
         copying the National Information Technology Development Agency (NITDA).
       </div>
-      <div class="sub__title">Exceptions to Data Subjects Access Rights</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">
+        Exceptions to Data Subjects Access Rights
+      </div>
+      <div class="paragraph pb-2 md:pb-4">
         To the extent permitted by applicable laws, we may refuse to act on your
         request, if at least one of the following applies:
         <ul>
@@ -544,14 +560,14 @@
           </li>
         </ul>
       </div>
-      <div class="sub__title">Contacting Us</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">Contacting Us</div>
+      <div class="paragraph pb-2 md:pb-4">
         We welcome any queries, requests you may have regarding our Data
         Protection Privacy Policies, or our privacy practices.
       </div>
 
-      <div class="sub__title">REFUND POLICY</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">REFUND POLICY</div>
+      <div class="paragraph pb-2 md:pb-4">
         Our refund policy has been devised to define the situations under which
         Abba and King Systems LLC will provide a refund, the procedure for
         claiming a refund and the responsibility of Abba and King Systems LLC in
@@ -565,8 +581,8 @@
         you do not want to receive any email from us in the future, please
         inform us by writing in to us through e-mail.
       </div>
-      <div class="sub__title">Coverage and Scope</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">Coverage and Scope</div>
+      <div class="paragraph pb-2 md:pb-4">
         <ul>
           <li>
             Our refund policy covers the refunds by Abba and King Systems LLC
@@ -582,8 +598,8 @@
           </li>
         </ul>
       </div>
-      <div class="sub__title">Filling a complaint</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">Filling a complaint</div>
+      <div class="paragraph pb-2 md:pb-4">
         <ul>
           <li>
             At Abba and King Systems LLC, we take every project with the final
@@ -606,8 +622,8 @@
           </li>
         </ul>
       </div>
-      <div class="sub__title">Limitation of Liability</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">Limitation of Liability</div>
+      <div class="paragraph pb-2 md:pb-4">
         Abba and King Systems LLC liability is bound by the value of the chunk
         of the project (as per our proposal) which remains incomplete at a given
         point point of time. Abba and King Systems LLC is not obligated for
@@ -616,9 +632,8 @@
         project has been cancelled by the client and such cancellation has been
         communicated to Abba and King Systems LLC in writing.
       </div>
-      <div class="sub__title">Processing of Refunds</div>
-      <div class="text">
-
+      <div class="h3 pb-2 md:pb-4">Processing of Refunds</div>
+      <div class="paragraph pb-2 md:pb-4">
         The partial refunds will be processed and mailed within 180 business
         days of the date of cancellation and will be brought about using the
         method of payment agreed upon in the beginning of the project ie; refund
@@ -630,8 +645,8 @@
         by check or refund by credit card.<br /><br />
       </div>
 
-      <div class="sub__title">Changes</div>
-      <div class="text">
+      <div class="h3 pb-2 md:pb-4">Changes</div>
+      <div class="paragraph pb-2 md:pb-4">
         Abba and King Systems LLC may at any time, without prior notice under
         its sole discretion, amend this policy from time to time. You are
         therefore requested to review this policy periodically. Your continued

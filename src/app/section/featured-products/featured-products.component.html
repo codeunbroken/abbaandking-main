@@ -1,0 +1,46 @@
+<div class="main__container">
+  <div class="main__wrapper">
+    <div class="top">
+      <div class="h2 text-left md:text-center pb-2 md:pb-4">
+        See Our Amazing featured Products
+      </div>
+      <div class="paragraph text-left md:text-center">
+        <p>Explore our showcase of innovative IT solutions.</p>
+      </div>
+    </div>
+
+    <div class="bottom py-4 md:py-12">
+      <div class="productContent">
+        <p-carousel
+          [value]="products"
+          [numVisible]="1"
+          [numScroll]="1"
+          [circular]="true"
+          [responsiveOptions]="responsiveOptions"
+        >
+          <ng-template let-product pTemplate="item">
+            <div
+              class="productContent md:grid md:grid-cols-[7fr,5fr] md:gap-8 md:items-center"
+            >
+              <div class="img py-8 md:py-0">
+                <img
+                  [src]="product.image"
+                  alt="{{ product.title }}"
+                  style="width: 100%; border-radius: 8px"
+                />
+              </div>
+
+              <div class="content">
+                <h3 class="h3 pb-4 md:pb-4">{{ product.title }}</h3>
+                <div
+                  [innerHTML]="product.description"
+                  class="paragraph-3"
+                ></div>
+              </div>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrivacyPolicyComponent implements OnInit {
 
-  constructor() { }
+
+constructor(private router: Router) { }
+
+
+
+
+
+  id: boolean;
 
   ngOnInit(): void {
+    this.id = true;
   }
+
+  navigate(route: string, scrollTo?: string) {
+    this.router.navigate([route], { fragment: scrollTo });
+}
+
 
 }

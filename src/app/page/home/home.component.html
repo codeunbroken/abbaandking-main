@@ -1,9 +1,33 @@
-<app-header></app-header>
+<app-header (pageId)="navigate($event.route, $event.scrollTo)" ></app-header>
+
 <app-hero></app-hero>
-<app-project></app-project>
-<app-what-we-do></app-what-we-do>
-<app-about></app-about>
+<app-together-section></app-together-section>
+<app-what-we-do id="about"></app-what-we-do>
+<app-software-expertise id="expertise"></app-software-expertise>
+<app-build-software id=""></app-build-software>
+<app-explore-services id="services"></app-explore-services>
+<app-featured-products id="products"></app-featured-products>
+<app-be-of-help></app-be-of-help>
+
+<app-footer id="contactUs" (pageId)="navigateToSection($event)"></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <app-about></app-about>
 <app-our-tools></app-our-tools>
 <app-testimonial></app-testimonial>
 <app-clients></app-clients>
-<app-footer></app-footer>
+ -->

@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SideBarComponent } from './section/side-bar/side-bar.component';
 import { HeaderComponent } from './section/header/header.component';
 import { HeroComponent } from './section/hero/hero.component';
-import { ProjectComponent } from './section/project/project.component';
 import { AboutComponent } from './section/about/about.component';
 import { WhatWeDoComponent } from './section/what-we-do/what-we-do.component';
 import { OurToolsComponent } from './section/our-tools/our-tools.component';
@@ -23,6 +24,12 @@ import { SplashscreenComponent } from './splashscreen/splashscreen.component';
 import { PrivacyPolicyComponent } from './page/privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './page/terms-conditions/terms-conditions.component';
 import { RefundPolicyComponent } from './page/refund-policy/refund-policy.component';
+import { TogetherSectionComponent } from './section/together-section/together-section.component';
+import { SoftwareExpertiseComponent } from './section/software-expertise/software-expertise.component';
+import { BuildSoftwareComponent } from './section/build-software/build-software.component';
+import { ExploreServicesComponent } from './section/explore-services/explore-services.component';
+import { FeaturedProductsComponent } from './section/featured-products/featured-products.component';
+import { BeOfHelpComponent } from './section/be-of-help/be-of-help.component';
 
 
 
@@ -32,7 +39,6 @@ import { RefundPolicyComponent } from './page/refund-policy/refund-policy.compon
     SideBarComponent,
     HeaderComponent,
     HeroComponent,
-    ProjectComponent,
     AboutComponent,
     WhatWeDoComponent,
     OurToolsComponent,
@@ -46,13 +52,20 @@ import { RefundPolicyComponent } from './page/refund-policy/refund-policy.compon
     SplashscreenComponent,
     PrivacyPolicyComponent,
     TermsConditionsComponent,
-    RefundPolicyComponent
+    RefundPolicyComponent,
+    TogetherSectionComponent,
+    SoftwareExpertiseComponent,
+    BuildSoftwareComponent,
+    ExploreServicesComponent,
+    FeaturedProductsComponent,
+    BeOfHelpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgxTypedJsModule,
     CarouselModule,
+    BrowserAnimationsModule ,
 
   ],
   providers: [],

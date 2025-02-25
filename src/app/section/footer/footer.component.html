@@ -1,43 +1,92 @@
-<div class="footer__main" id="contact">
-  <div class="footer__container">
-    <div class="footer__top">
-      <p class="paragraph" data-aos="fade-up" data-aos-offset="-350">
-        GET IN TOUCH WITH US
-      </p>
-      <h2 class="head__two" data-aos="fade-up" data-aos-offset="-450">
-        You can find us literally anywhere, just push a button and we are there
-      </h2>
-    </div>
-    <div class="footer__bottom">
-      <div class="div">
-        <img src="../../../assets/twitterIcon.svg" alt="" />
-        <div class="text">@abbaandking</div>
+<div
+  class="footer__container bg-footerImg bg-center bg-no-repeat bg-cover rounded-3xl"
+>
+  <div class="footer__wrapper grid grid-col gap-8 md:grid md:grid-row md:gap-8">
+    <div class="h2 text-white">
+      <h2 class="head pb-2 md:pb-2">Get in touch with us</h2>
+      <div class="paragraph text-white">
+        <p>
+          You can find us literally anywhere, just push a button and we are
+          there
+        </p>
       </div>
-      <div class="div">
-        <img src="../../../assets/locationIcon.svg" alt="" />
-        <div class="text">Top floor, 38 Orogun road, Ibadan.</div>
-      </div>
-      <a href="mailto:info@abbaandking.com" class="div">
-        <img src="../../../assets/emailIcon.svg" alt="" />
-        <div class="text">info@abbaandking.com</div>
-      </a>
-      <a class="div" href="tel:+2348176317001">
-        <img src="../../../assets/phoneIcon.svg" alt="" />
-        <div class="text">(+234) 817 631 7001</div>
-      </a>
     </div>
-  </div>
 
-  <div class="policy__links footer__container">
-    <div class="privacy__policy">
-      <a class="div" routerLink="/privacy-policy">
-        <div class="text">Privacy Policy</div>
-      </a>
+    <div
+      class="links grid grid-row gap-4 md:grid md:grid-cols-[4fr,8fr] md:gap-0"
+    >
+      <div class="content1">
+        <div class="socials__container mb-3 md:mb-5">
+          <div
+            class="socials flex items-center justify-start gap-2 md:flex md:items-center md:justify-start md:gap-2 mb-4 md:mb-4"
+          >
+            <div class="left__icon">
+              <img src="../../../assets/x.svg" alt="" />
+            </div>
+            <div class="Right__socialsItems text-white">@abbandking</div>
+          </div>
+
+          <div
+            class="socials flex items-center justify-start gap-2 md:flex md:items-center md:justify-start md:gap-2 mb-4 md:mb-4"
+          >
+            <div class="left__icon">
+              <img src="../../../assets/mail.svg" alt="" />
+            </div>
+            <div class="Right__socialsItems text-white">
+              info@abbaandking.com
+            </div>
+          </div>
+          <div
+            class="socials flex items-center justify-start gap-2 md:flex md:items-center md:justify-start md:gap-2 mb-4 md:mb-4"
+          >
+            <div class="left__icon">
+              <img src="../../../assets/phone.svg" alt="" />
+            </div>
+            <div class="Right__socialsItems text-white">
+              (+234) 817 631 7001
+            </div>
+          </div>
+          <div
+            class="socials flex items-center justify-start gap-2 md:flex md:items-center md:justify-start md:gap-2 mb-4 md:mb-4"
+          >
+            <div class="left__icon">
+              <img src="../../../assets/location.svg" alt="" />
+            </div>
+            <div class="Right__socialsItems text-white">
+              Top floor, 38 Orogun road, Ibadan.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="content2">
+        <div class="linkItems mb-3 md:mb-5">
+          <div
+            class="links__wrapper text-white list-none cursor-pointer flex flex-col gap-4"
+          >
+            <li (click)="pageId.emit('about')">About</li>
+            <li (click)="pageId.emit('expertise')">Expertise</li>
+            <li (click)="pageId.emit('services')">Services</li>
+            <li (click)="pageId.emit('products')">Products</li>
+            <li (click)="pageId.emit('contactUs')">Contact us</li>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="Terms__conditions">
-      <a class="div" routerLink="/terms-conditions">
-        <div class="text">Terms & Conditions</div>
-      </a>
+
+    <div
+      class="bottom__content flex items-center justify-left gap-12 md:flex md:items-center md:justify-left md:gap-4"
+    >
+      <div class="privacy text-white">
+        <div class="paragraph-2 cursor-pointer" routerLink="/privacy-policy">
+          Privacy policy
+        </div>
+      </div>
+      <div class="terms text-white">
+        <div class="paragraph-2 cursor-pointer" routerLink="/terms-conditions">
+          Terms & conditions
+        </div>
+      </div>
     </div>
   </div>
 </div>
